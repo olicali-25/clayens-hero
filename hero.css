@@ -30,6 +30,7 @@
 #hero .base p{font-size:clamp(16px,1.35vw,19px);display:inline-flex;gap:14px;justify-content:center;align-items:center;flex-wrap:wrap}
 #hero .base p b{font-size:.8em}
 #gmt{margin-top:14px;color:var(--ink);display:inline-flex;gap:0;font-family:'Magistral',system-ui,sans-serif;font-size:12px;letter-spacing:.08em;white-space:pre}
+#gmt.pgmt{margin-top:22px;font-size:13px;font-weight:500;color:var(--ink)}
 #gmt span{display:inline-block;min-width:.62em;text-align:center}
 #gmt span.flip{animation:flip .32s ease}
 @keyframes flip{0%{opacity:0;transform:translateY(4px)}100%{opacity:1;transform:none}}
@@ -153,3 +154,12 @@
 #hero .tar{left:calc(var(--hs) * -1);right:calc(var(--hs) * -1);background-image:url(img/tarmac-large.webp)}
 #hero .v{left:calc(50% + (var(--x) - 50) * var(--etal, 1) * 1%)}
 @media (max-width:900px){#hero .tar{left:0;right:0;background-image:url(img/tarmac.webp)}}
+#hist .top .kick{color:var(--orange-ink)}
+#hist.space .top .kick{color:var(--orange)}
+#hero .base p{color:var(--ink)}
+#hero .k{font-size:13px;letter-spacing:.04em}
+.meet a{font-size:14px;font-weight:700!important;color:#15201f}
+#hist .top .kick,#hist.space .top .kick{color:var(--orange)}
+#hero .ck .lead{text-wrap:wrap;margin-top:0;line-height:56px}
+@media (max-width:900px){#hero .ck .lead{line-height:1.22}}
+@media (min-width:901px){#hero .base p{font-size:18px}}

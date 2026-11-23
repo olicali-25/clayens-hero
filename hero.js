@@ -13,10 +13,10 @@ var $=function(s){return document.querySelector(s)};
 /* en-tête du site Webflow : passe en sombre pendant le cockpit si un élément #hd existe (facultatif) */
 var hd=$('#hd'),ckOn=false;function headerState(){if(!hd)return;var inHero=scrollY<$('#hero').offsetHeight-innerHeight;hd.classList.toggle('dark',inHero&&ckOn)}
 var lead=$('#lead'),words=lead.textContent.split(' ');lead.innerHTML=words.map(function(w){return '<span class="w">'+w+'</span>'}).join(' ');var ws=lead.querySelectorAll('.w');
-var Z=[['America/New_York','USA'],['America/Chicago','USA'],['America/Denver','USA'],['America/Mexico_City','MEXICO'],['Europe/Paris','FRANCE'],['Africa/Casablanca','NORTH AFRICA']],zi=4,gmt=$('#gmt'),cur='';
-function zstr(z){var d=new Date();var off=new Intl.DateTimeFormat('en-US',{timeZone:z[0],timeZoneName:'shortOffset'}).formatToParts(d).find(function(p){return p.type==='timeZoneName'}).value.replace('UTC','GMT');var t=new Intl.DateTimeFormat('en-GB',{timeZone:z[0],hour:'2-digit',minute:'2-digit'}).format(d);return off+'  ·  '+z[1]+'  ·  '+t}
+var Z=[['Europe/Paris','GENAS, FRANCE'],['Europe/Paris','BRIGNAIS, FRANCE'],['America/New_York','ATLANTA, USA'],['America/Chicago','ROCKFORD, USA'],['America/Denver','LOVELAND, USA']],zi=0,gmt=$('#gmt'),cur='';
+function zstr(z){var d=new Date();var off=new Intl.DateTimeFormat('en-US',{timeZone:z[0],timeZoneName:'shortOffset'}).formatToParts(d).find(function(p){return p.type==='timeZoneName'}).value.replace('UTC','GMT');var t=new Intl.DateTimeFormat('en-GB',{timeZone:z[0],hour:'2-digit',minute:'2-digit'}).format(d);return z[1]+'  ·  '+t+'  ·  '+off}
 function setGmt(s){var L=Math.max(s.length,cur.length);var html='';for(var i=0;i<L;i++){var a=s[i]||' ',b=cur[i]||' ';html+='<span'+(a!==b&&!reduce?' class="flip" style="animation-delay:'+(i*22)+'ms"':'')+'>'+(a===' '?'&nbsp;':a)+'</span>'}gmt.innerHTML=html;cur=s}
-setGmt(zstr(Z[zi]));setInterval(function(){zi=(zi+1)%Z.length;setGmt(zstr(Z[zi]))},3600);
+if(gmt){setGmt(zstr(Z[zi]));setInterval(function(){zi=(zi+1)%Z.length;setGmt(zstr(Z[zi]))},3600);}
 var wm=$('#wm');
 /* ===== Hero f : apparition puis caméra vers l'avion de ligne ===== */
 var hero=$('#hero'),scene=$('#scene'),VS=[].slice.call(document.querySelectorAll('#hero .v')),hbase=$('#hbase'),meet=$('#meet'),hwhite=$('#hwhite'),notch=document.querySelector('#hero .notch')||document.createElement('i');
