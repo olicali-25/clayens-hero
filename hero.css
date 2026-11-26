@@ -3,7 +3,7 @@
 #hero,#hero *,#hero *::before,#hero *::after{box-sizing:border-box}
 #hero img{max-width:100%;vertical-align:initial}#hero canvas{max-width:none}
 #hero h1,#hero p{margin:0}#hero a{color:inherit}
-:root{--ink:#374B63;--grey:#5F6F82;--orange:#FF8300;--orange-ink:#A85200;--paper:#F4F3EF;--white:#fff;--line:rgba(55,75,99,.16);--g:clamp(20px,3.4vw,48px);--max:1440px}
+:root{--ink:#374B63;--grey:#5F6F82;--orange:#FF8300;--orange-ink:#FF8300;--paper:#F4F3EF;--white:#fff;--line:rgba(55,75,99,.16);--g:clamp(20px,3.4vw,48px);--max:1440px}
 .mono{font-family:'Magistral',system-ui,sans-serif;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
 .kick{font-family:'Magistral',system-ui,sans-serif;font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:500}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
@@ -130,11 +130,11 @@
 :root{--disp:'Magistral','Magistral',system-ui,sans-serif}
 .meet .t,#hero .ck .lead,#hero .base p{font-family:var(--disp);font-weight:400;font-style:normal;font-stretch:100%}
 .meet .t,#hero .ck .lead,#hero .base p{letter-spacing:0!important}
-.kick{font-family:var(--disp);font-weight:700;font-size:13px;letter-spacing:.06em;color:var(--orange-ink)}
+.kick{font-family:var(--disp);font-weight:500;font-size:13px;letter-spacing:.04em;color:var(--orange-ink)}
 #hero .wm{left:50%;width:auto;height:18.4%;transform:translateX(-50%)}
 #hero .base p{font-weight:700!important}
 #hero .base p b{font-weight:400}
-.meet .k{font-weight:700}
+.meet .k{font-weight:500}
 #hero .wm{z-index:2}
 #hero .v{z-index:3}
 #hero .v.rk{z-index:1}
