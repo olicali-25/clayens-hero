@@ -163,3 +163,21 @@
 #hero .ck .lead{text-wrap:wrap;margin-top:0;line-height:56px}
 @media (max-width:900px){#hero .ck .lead{line-height:1.22}}
 @media (min-width:901px){#hero .base p{font-size:18px}}
+/* Moxxy 26/11 (call client) : bloc d'introduction sur l'asphalte fixe, sans cockpit ; texte en gris Aerospace */
+#hero .ck{background:transparent}
+#hero .ck .ckb,#hero .ck .ckv{display:none}
+#hero .ck .ckc{color:var(--ink)}
+#hero .ck .kick{color:var(--orange)}
+#hero .ck .lead .w{color:rgba(55,75,99,.22)}
+#hero .ck .lead .w.on{color:var(--ink)}
+#hero .ck .ckn{color:var(--grey)}
+body .nav_component.dark:not(.solid):not(.is-menu-open){color:#15201f}
+/* Moxxy 26/11 : carrousel des salons (Aircraft Interiors Expo, Paris Air Show) */
+.meet .sl{display:none}
+.meet .sl.on{display:block}
+.meet .lg{aspect-ratio:552/311;object-fit:contain}
+.meet .bt{margin-top:6px;font-size:14px;font-weight:700;color:#15201f}
+.meet .dots button{width:7px;height:7px;padding:0;border:0;border-radius:50%;background:var(--orange);opacity:.35;cursor:pointer}
+.meet .dots button.on{opacity:1}
+.meet .dots button:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+
